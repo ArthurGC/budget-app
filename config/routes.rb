@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :purchases
+  resources :groups
   devise_for :users
   resources :users
   root 'users#main_page'
