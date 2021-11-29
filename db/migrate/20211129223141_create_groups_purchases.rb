@@ -1,4 +1,4 @@
-class CreateGroupsPurchases < ActiveRecord::Migration
+class CreateGroupsPurchases < ActiveRecord::Migration[6.1]
   def change
     create_table :groups_purchases, :id => false do |t|
       t.references :group
