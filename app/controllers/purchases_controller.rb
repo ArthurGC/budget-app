@@ -3,7 +3,12 @@ class PurchasesController < ApplicationController
 
   # GET /purchases or /purchases.json
   def index
-    @purchases = Purchase.all
+    @category = Group.find(params[:group_id])
+    p @category
+    p 'CONSOLE LOG'
+    @ewe = @category.group_purchases
+    p @ewe
+    @purchases = @ewe
   end
 
   # GET /purchases/1 or /purchases/1.json
@@ -23,7 +28,7 @@ class PurchasesController < ApplicationController
 
     respond_to do |format|
       if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
+        format.html { redirect_to group_purchases_path, notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,7 +41,7 @@ class PurchasesController < ApplicationController
   def update
     respond_to do |format|
       if @purchase.update(purchase_params)
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully updated.' }
+        format.html { redirect_to group_purchases_path, notice: 'Purchase was successfully updated.' }
         format.json { render :show, status: :ok, location: @purchase }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -63,6 +68,6 @@ class PurchasesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def purchase_params
-    params.require(:purchase).permit(:name, :amount, :user_id)
+    params.require(:purchase).permit(:name, :amount).merge(author_id: current_user.id)
   end
 end

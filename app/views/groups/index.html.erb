@@ -15,9 +15,13 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= group.name %></td>
+        <td>
+          <%= link_to group_purchases_path(group) do%>
+          <%= group.name %>
+          <%end%>
+        </td>
         <td><%= group.icon %></td>
-        <td><%= group.user_id %></td>
+        <td><%= group.author_id %></td>
         <td><%= link_to 'Show', group %></td>
         <td><%= link_to 'Edit', edit_group_path(group) %></td>
         <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Group', new_group_path %>
+<%= link_to 'Add new Category', new_group_path %>

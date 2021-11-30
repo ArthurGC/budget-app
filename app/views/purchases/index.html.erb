@@ -17,7 +17,7 @@
       <tr>
         <td><%= purchase.name %></td>
         <td><%= purchase.amount %></td>
-        <td><%= purchase.user_id %></td>
+        <td><%= purchase.author_id %></td>
         <td><%= link_to 'Show', purchase %></td>
         <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
         <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Purchase', new_purchase_path %>
+<%= link_to 'Add new Transaction',  new_group_purchase_path %>
