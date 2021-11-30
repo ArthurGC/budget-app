@@ -20,7 +20,7 @@
           <%= group.name %>
           <%end%>
         </td>
-        <td><%= group.icon %></td>
+        <td><img src=<%group.icon%> alt="user-picture"></td>
         <td><%= group.total_amount %></td>
         <td><%= link_to 'Show', group %></td>
         <td><%= link_to 'Edit', edit_group_path(group) %></td>
