@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
-  def main_page; end
+  def main_page
+    authorize! :read, User
+  end
 
   # GET /users or /users.json
   def index
