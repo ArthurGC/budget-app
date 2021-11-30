@@ -26,7 +26,7 @@ RSpec.describe 'Group page', type: :feature do
     end
 
     it 'add new food to the recipe' do
-        click_link 'Add new Category'
+      click_link 'Add new Category'
       fill_in 'group_name', with: 'Games'
       fill_in 'group_icon', with: 'Icon'
       click_button 'Create Group'

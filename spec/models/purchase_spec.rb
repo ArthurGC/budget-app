@@ -21,5 +21,4 @@ RSpec.describe Purchase, type: :model do
     @purchase.amount = 'I am a number'
     expect(@purchase).to_not be_valid
   end
-
 end

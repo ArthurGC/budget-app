@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Main Page', type: :request do
-
   describe 'GET #main_page' do
     before { get '/' }
     it 'is a success' do

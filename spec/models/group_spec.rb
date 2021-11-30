@@ -23,5 +23,4 @@ RSpec.describe Group, type: :model do
     @group.purchases << @purchase2
     expect(@group.total_amount).to eq(@purchase1.amount + @purchase2.amount)
   end
-
 end
