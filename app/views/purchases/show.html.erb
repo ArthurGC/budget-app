@@ -12,8 +12,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @purchase.user_id %>
+  <%= @purchase.author_id %>
 </p>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>
+<%= link_to 'Edit', edit_group_purchase_path(@category, @purchase) %> |
+<%= link_to 'Back', :back %>

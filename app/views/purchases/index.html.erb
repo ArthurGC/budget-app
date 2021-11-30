@@ -18,9 +18,9 @@
         <td><%= purchase.name %></td>
         <td><%= purchase.amount %></td>
         <td><%= purchase.author_id %></td>
-        <td><%= link_to 'Show', purchase %></td>
-        <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', group_purchase_path(@category, purchase) %></td>
+        <td><%= link_to 'Edit', edit_group_purchase_path(@category, purchase) %></td>
+        <td><%= link_to 'Destroy', group_purchase_path(@category, purchase), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
