@@ -20,7 +20,6 @@ class PurchasesController < ApplicationController
 
   # POST /purchases or /purchases.json
   def create
-
     @purchase = @category.purchases.create(purchase_params)
 
     respond_to do |format|
