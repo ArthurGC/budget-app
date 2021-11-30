@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'Group page', type: :feature do
+RSpec.describe 'Purchase page', type: :feature do
   describe 'index test' do
     before(:all) do
       @user = create(:user)
       @group = create(:group, author_id: @user.id)
+      @purchase = create(:purchase, author_id: @user.id)
+      @group.purchases << @purchase
     end
 
     before(:each) do
@@ -14,23 +16,24 @@ RSpec.describe 'Group page', type: :feature do
         fill_in 'Password', with: @user.password
       end
       click_button 'Log in'
+      visit group_purchases_path(@group)
     end
 
     it 'expects to see group name' do
-      expect(page).to have_content(@group.name)
+      expect(page).to have_content(@purchase.name)
     end
 
     it 'log-in and expects to go to add ingredients page' do
-      click_link 'Add new Category'
-      expect(page).to have_current_path(new_group_path)
+      click_link 'Add new Transaction'
+      expect(page).to have_current_path(new_group_purchase_path(@group))
     end
 
     it 'add new food to the recipe' do
-        click_link 'Add new Category'
-      fill_in 'group_name', with: 'Games'
-      fill_in 'group_icon', with: 'Icon'
-      click_button 'Create Group'
-      expect(page).to have_content('Games')
+      click_link 'Add new Transaction'
+      fill_in 'purchase_name', with: 'COD 4'
+      fill_in 'purchase_amount', with: '1'
+      click_button 'Create Purchase'
+      expect(page).to have_content('COD 4')
     end
   end
 end
