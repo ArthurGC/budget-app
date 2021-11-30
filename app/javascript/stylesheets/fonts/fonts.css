@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Proxima';
+    src:
+      url('ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima';
+    src:
+      url('ProximaNova-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Magnolia';
+    src:
+      url('Magnolia-Script.woff') format('woff'),
+      url('Magnolia-Script.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

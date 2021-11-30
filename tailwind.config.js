@@ -7,6 +7,10 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      proxima: ['Proxima'],
+      magno: ['Magnolia'],
+    },
     extend: {},
   },
   variants: {
