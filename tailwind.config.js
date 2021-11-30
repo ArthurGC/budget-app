@@ -11,7 +11,13 @@ module.exports = {
       proxima: ['Proxima'],
       magno: ['Magnolia'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        main: '#3778c2',
+        second: '#5fb523',
+        darktext: '#434b54',
+      },
+    },
   },
   variants: {
     extend: {},
