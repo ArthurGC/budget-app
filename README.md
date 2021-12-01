@@ -95,6 +95,11 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/ArthurGC/budget-app/issues).
 
+## :grey_exclamation: Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- [SnapScan Design Guideline](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!

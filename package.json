@@ -10,6 +10,7 @@
     "@rails/webpacker": "5.4.3",
     "autoprefixer": "^10",
     "postcss": "^8",
+    "postcss-cli": "^9.0.2",
     "postcss-loader": "^4",
     "tailwindcss": "^2",
     "turbolinks": "^5.2.0",
