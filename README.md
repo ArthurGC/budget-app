@@ -10,7 +10,7 @@ Budget App is a mobile web application where you can manage your budget: you hav
 ## :hammer: Built With
 
 - Ruby on Rails
-- Bootstrap
+- TailwindCSS
 
 To get a local copy up and running follow these simple steps:
 
@@ -43,12 +43,12 @@ rails db:seed
 ```
 5. Run server
 ```ruby
-rails server
-```
-[OPTIONAL] if you receive an error about turbolinks or application.(css/js) after running the server. Please use this command before run the server:
-```ruby
 rails assets:precompile
 ```
+```ruby
+rails server
+```
+
 
 **Run tests**
 
