@@ -9,10 +9,10 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
     "autoprefixer": "^10",
-    "postcss": "^8",
+    "postcss": "^8.3.11",
     "postcss-cli": "^9.0.2",
     "postcss-loader": "^4",
-    "tailwindcss": "^2",
+    "tailwindcss": "^2.2.19",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
