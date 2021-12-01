@@ -4,3 +4,7 @@
 @tailwind utilities;
 /* stylelint-enable */
 @import url("./fonts.css");
+
+.image {
+  width: calc(50px + 2vw);
+}

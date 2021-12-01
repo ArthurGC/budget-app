@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
   def main_page
+    @current_user = current_user
     authorize! :read, User
   end
 
