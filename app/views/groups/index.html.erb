@@ -23,13 +23,13 @@
       <div class="text-center">
         <img src=<%group.icon%> alt="group-picture">
       </div>
-      <div class="col-start-2 col-span-4 text-gray-400">
+      <div class="col-start-2 col-span-4 text-gray-400 font-proxima">
         <%= link_to group_purchases_path(group) do%>
         <%= group.name %>
         <%end%>
       </div>
       <div class="">
-        <p class="font-bold"><%= group.total_amount %></p>
+        <p class="font-bold font-proxima"><%= group.total_amount %></p>
       </div>
     </li>
   <% end %>
