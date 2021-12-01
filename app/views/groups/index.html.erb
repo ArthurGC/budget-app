@@ -1,54 +1,9 @@
 <section class="h-screen bg-back relative">
 
-  <%if notice %>
-  <div class="absolute top-5 right-2 bg-white border border-teal-500 rounded text-teal-900 px-4 py-3 shadow-md w-50" role="alert">
-    <div class="flex">
-      <div class="py-1 text-second"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
-      <div>
-        <p class="font-proxima font-bold text-darktext" id="notice"><%= notice %></p>
-      </div>
-    </div>
-  </div>
-  <%end%>
-
-<nav class="bg-main py-4 px-4">
-  <ul class="flex justify-between items-center container mx-auto">
-    <li>
-      <%= link_to root_path do %>
-      <i class="fa fa-arrow-left text-white cursor-pointer"></i>
-      <%end%>
-    </li>
-    <li>
-      <p class="text-white font-proxima">CATEGORY</p>
-    </li>
-    <li>
-      <i class="fa fa-search text-white cursor-pointer"></i>
-    </li>
+  <%= render "notice/notice" %>
+  <%= render "groups/nav" %>
+  <ul class="w-full px-4 mt-2 overflow-auto sm:px-0 container mx-auto">
+    <%= render @groups %>
   </ul>
-</nav>
-
-<ul class="w-full px-4 mt-2 overflow-auto sm:px-0 container mx-auto">
-  <% @groups.each do |group| %>
-  <%= link_to group_purchases_path(group) do%>
-    <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200 mb-2">
-      <div class="text-center image">
-        <%= image_tag("#{group.icon}", :alt => "group icon") %>
-      </div>
-      <div class="col-start-2 col-span-4 text-gray-400 font-proxima">
-        <%= group.name %>
-      </div>
-      <div class="">
-        <p class="font-bold font-proxima">$<%= group.total_amount %></p>
-      </div>
-    </li>
-    <%end%>
-  <% end %>
-</ul>
-
-<div class="bg-second py-8 absolute inset-x-0 bottom-0 text-center">
-  <div class="container mx-auto">
-    <%= link_to 'ADD NEW CATEGORY', new_group_path, class: "text-center text-white py-4 px-24
-   font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
-  </div>
-</div>
+  <%= render "groups/button" %>
 </section>

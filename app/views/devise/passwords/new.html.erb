@@ -1,16 +1,41 @@
-<h2>Forgot your password?</h2>
-
+<section class="h-screen bg-back">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <nav class="bg-main py-2 px-4">
+    <ul class="flex justify-between items-center">
+      <li>
+        <%= link_to root_path do %>
+        <i class="fa fa-arrow-left text-white cursor-pointer"></i>
+        <%end%>
+      </li>
+      <li>
+        <p class="text-white font-proxima">RESET PASSWORD</p>
+      </li>
+      <li>
+        <i class="fa fa-arrow-left text-transparent cursor-pointer bg-transparent"></i>
+      </li>
+    </ul>
+  </nav>
+
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true,
+     autocomplete: "email", placeholder: "Email",
+     class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+  <div class="bg-second py-4 absolute inset-x-0 bottom-0 text-center">
+    <div class="container mx-auto">
+      <%= f.submit 'SEND ME RESET PASSWORD', class: "text-center text-white py-4 px-20
+     font-proxima border-2 border-bg-white rounded-lg cursor-pointer bg-transparent" %>
+    </div>
+</div>
+
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="text-center py-4 bg-transparent text-gray-400 hover:underline font-proxima">
+  <%= render "devise/shared/links" %>
+</div>
+
+<%= render "devise/shared/error_messages", resource: resource %>
+</section>

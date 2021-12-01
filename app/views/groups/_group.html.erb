@@ -1,0 +1,13 @@
+<%= link_to group_purchases_path(group) do%>
+    <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200 mb-2">
+    <div class="text-center image">
+        <%= image_tag("#{group.icon}", :alt => "group icon") %>
+    </div>
+    <div class="col-start-2 col-span-4 text-gray-400 font-proxima">
+        <%= group.name %>
+    </div>
+    <div class="">
+        <p class="font-bold font-proxima">$<%= group.total_amount %></p>
+    </div>
+    </li>
+<%end%>

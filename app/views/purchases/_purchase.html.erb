@@ -1,0 +1,11 @@
+<li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200">
+    <div class="text-center p-2 image">
+      <%= image_tag("checklist.png", :alt => "purchase check") %>
+    </div>
+    <div class="col-start-2 col-span-4 text-gray-400 font-proxima">
+      <%= purchase.name %>
+    </div>
+    <div class="text-right">
+      <p class="font-bold font-proxima">$<%= purchase.amount %></p>
+    </div>
+</li>
