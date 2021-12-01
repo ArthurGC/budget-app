@@ -5,7 +5,7 @@
     <ul class="flex justify-between items-center">
       <li>
         <%= link_to groups_path do %>
-        <i class="fa fa-arrow-left text-white cursor-pointer"></i>
+        <i class="fa fa-bars text-white cursor-pointer"></i>
         <%end%>
       </li>
       <li>
@@ -17,7 +17,7 @@
     </ul>
   </nav>
   
-  <div class="px-2 py-4 flex justify-between items-center bg-white">
+  <div class="px-4 py-4 flex justify-between items-center bg-white">
     <p class="font-proxima text-gray-500">Total of transactions:</p>
     <p class="font-bold font-proxima"><%= @category.total_amount %></p>
   </div>
@@ -31,7 +31,7 @@
         <div class="col-start-2 col-span-4 text-gray-400">
           <%= purchase.name %>
         </div>
-        <div class="">
+        <div class="text-right">
           <p class="font-bold"><%= purchase.amount %></p>
         </div>
       </li>
