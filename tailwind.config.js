@@ -16,6 +16,7 @@ module.exports = {
         main: '#3778c2',
         second: '#5fb523',
         darktext: '#434b54',
+        back: '#F1F3F2',
       },
     },
   },

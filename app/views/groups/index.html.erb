@@ -1,35 +1,42 @@
-<p id="notice"><%= notice %></p>
+<section class="h-screen bg-back relative">
+  <p id="notice"><%= notice %></p>
 
-<h1>Groups</h1>
+<nav class="bg-main py-4 px-4">
+  <ul class="flex justify-between items-center">
+    <li>
+      <%= link_to root_path do %>
+      <i class="fa fa-arrow-left text-white cursor-pointer"></i>
+      <%end%>
+    </li>
+    <li>
+      <p class="text-white font-proxima">CATEGORY</p>
+    </li>
+    <li>
+      <i class="fa fa-search text-white cursor-pointer"></i>
+    </li>
+  </ul>
+</nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Icon</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<ul class="w-full px-4 mt-2 space-y-2">
+  <% @groups.each do |group| %>
+    <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200">
+      <div class="text-center">
+        <img src=<%group.icon%> alt="user-picture">
+      </div>
+      <div class="col-start-2 col-span-4 text-gray-400">
+        <%= link_to group_purchases_path(group) do%>
+        <%= group.name %>
+        <%end%>
+      </div>
+      <div class="">
+        <p class="font-bold"><%= group.total_amount %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
 
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td>
-          <%= link_to group_purchases_path(group) do%>
-          <%= group.name %>
-          <%end%>
-        </td>
-        <td><img src=<%group.icon%> alt="user-picture"></td>
-        <td><%= group.total_amount %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Add new Category', new_group_path %>
+<div class="bg-second py-8 absolute inset-x-0 bottom-0 text-center">
+  <%= link_to 'ADD NEW CATEGORY', new_group_path, class: "text-center text-white py-4 px-24
+   font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
+</div>
+</section>
