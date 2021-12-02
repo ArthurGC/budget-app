@@ -7,6 +7,9 @@ Budget App is a mobile web application where you can manage your budget: you hav
 
 ![Screenshot](./app/assets/images/BudgetApp-preview.png)
 
+## :red_circle: Live Project
+- [Live Project](https://budget-app-arthurgc.herokuapp.com/)
+
 ## :red_circle: Video Preview
 
 - [Video Link](https://www.loom.com/share/2e28a6e2a3d94db29e0fab88f2c7593b)
