@@ -28,7 +28,7 @@ RSpec.describe 'Login page', type: :feature do
       expect(page).to have_content('Invalid Email or password.')
     end
 
-    it 'new_user_session_path redirect to root_path if receive right information' do
+    it 'new_user_session_path redirect to groups_path if receive right information' do
       visit new_user_session_path
       within('#new_user') do
         fill_in 'Email', with: @user_login.email

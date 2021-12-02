@@ -3,6 +3,13 @@
 
 Budget App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
+## :camera: Screenshot
+
+![Screenshot](./app/assets/images/BudgetApp-preview.png)
+
+## :red_circle: Video Preview
+
+- [Video Link](https://www.loom.com/share/2e28a6e2a3d94db29e0fab88f2c7593b)
 ## :hammer: Preview
 
 - Under construction
