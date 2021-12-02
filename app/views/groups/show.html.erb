@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<section class="h-screen bg-back relative">
+
+  <nav class="bg-main py-4 px-4">
+    <ul class="flex justify-between items-center">
+      <li>
+        <%= link_to groups_path do %>
+        <i class="fa fa-arrow-left text-white cursor-pointer"></i>
+        <%end%>
+      </li>
+      <li>
+        <p class="text-white font-proxima">DETAILS CATEGORY</p>
+      </li>
+      <li>
+        <i class="fa fa-bars text-transparent cursor-pointer"></i>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="w-full px-4 mt-4">
+    <div class="p-4 space-y-4 bg-white rounded">
+      <img src=<% @group.icon %> alt="group-picture">
+      <h2 class="font-bold font-proxima"><%= @group.name %></h2>
+      <p class="font-proxima"><%= @group.total_amount %> unit</p>
+      <div class="font-proxima">     
+        <%= link_to 'Edit', edit_group_path(@group), class: 'text-white py-2 px-8
+        border-2 bg-second rounded-lg cursor-pointer' %>
+      </div>
+    </div>
+  </div>
+</section>

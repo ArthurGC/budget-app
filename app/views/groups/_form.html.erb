@@ -1,0 +1,35 @@
+<%= form_with(model: @group) do |form| %>
+
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name",
+    class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+
+  <div class="field">
+    <%= form.select(:icon, options_for_select(list_icons), {} ,
+    { class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal bg-white" }) %>
+  </div>
+  
+  <% if group.errors.any? %>
+  <div class="bg-white border border-teal-500 rounded text-teal-900 px-4 py-3 shadow-md w-50" role="alert">
+    <div class="flex">
+      <div class="py-1 text-red-500"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+      <div>
+        <h2 class="text-red-500"><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+        <ul class="list-disc">
+          <% group.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="bg-second py-4 absolute inset-x-0 bottom-0 text-center">
+    <%= form.submit 'ADD CATEGORY', class: "bg-transparent text-center text-white py-4 px-24
+     font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
+  </div>
+
+<% end %>
+

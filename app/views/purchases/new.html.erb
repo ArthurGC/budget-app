@@ -1,0 +1,21 @@
+<section class="h-screen bg-back relative">
+    <nav class="bg-main py-4 px-4">
+        <ul class="flex justify-between items-center">
+          <li>
+            <%= link_to group_purchases_path(@category) do %>
+            <i class="fa fa-arrow-left text-white cursor-pointer"></i>
+            <%end%>
+          </li>
+          <li>
+            <p class="text-white font-proxima">NEW TRANSACTION</p>
+          </li>
+          <li>
+            <%= link_to group_purchases_path(@category) do %>
+            <i class="fa fa-bars text-white cursor-pointer"></i>
+            <%end%>
+          </li>
+        </ul>
+    </nav>
+
+<%= render 'form', purchase: @purchase %>
+</section>
