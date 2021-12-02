@@ -49,6 +49,18 @@ rails assets:precompile
 rails server
 ```
 
+If you can't see the styles for any reason try with this:
+
+(two terminals at the same time)
+
+Run in a terminal
+```ruby
+bin/webpack-dev-server
+```
+Run in other terminal
+```ruby
+rails server
+```
 
 **Run tests**
 
