@@ -1,0 +1,10 @@
+<section class="h-screen bg-back relative">
+  <%= render "notice/notice" %>
+  <%= render "purchases/nav" %>
+  <%= render "purchases/category" %>
+  <ul class="w-full px-4 mt-2 space-y-2 overflow-auto sm:px-0 container mx-auto">
+    <%= render @purchases %>
+  </ul>
+  <%= render "purchases/button" %>
+
+</section>

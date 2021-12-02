@@ -1,0 +1,9 @@
+<section class="h-screen bg-back relative">
+
+  <%= render "notice/notice" %>
+  <%= render "groups/nav" %>
+  <ul class="w-full px-4 mt-2 overflow-auto sm:px-0 container mx-auto">
+    <%= render @groups %>
+  </ul>
+  <%= render "groups/button" %>
+</section>

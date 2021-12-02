@@ -1,0 +1,18 @@
+<section class="container mx-auto h-screen grid grid-rows-5">
+    <div class="row-start-1 row-span-4 place-self-center">
+        <h1 class="font-magno font-bold text-4xl text-center text-darktext">Parrotscan</h1>
+    </div>
+
+<div class="flex flex-col px-4 space-y-2 row-start-5 relative">
+    <% if user_signed_in? %>
+        <div class="text-center absolute inset-x-0 -top-16 px-4">
+            <p class="border border-green-500 bg-green-100 py-4 px-8 font-proxima font-bold rounded text-second">Hello <%= @current_user.name %></p>
+        </div>
+        <%= link_to "GO TO CATEGORY",groups_path, class: "text-center py-4 bg-main text-white font-proxima rounded"  %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-center py-4 font-proxima border-2 border-bg-darktext rounded" %>
+    <%else%>
+        <%= link_to "LOG IN",new_user_session_path, class: "text-center py-4 bg-main text-white font-proxima rounded" %>
+        <%= link_to "SIGN UP",new_user_registration_path, class: "text-center py-4 font-proxima border-2 border-bg-darktext rounded" %>
+    <% end %>
+</div>
+</section>
