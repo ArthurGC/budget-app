@@ -28,7 +28,7 @@ git clone https://github.com/ArthurGC/budget-app.git
 bundle install
 ```
 ```ruby
-yarn install
+npm install or yarn install
 ```
 2. Setup you database.yml with your own postgres's password or create a PASS_POSTGRES environment variable 
 ```ruby
